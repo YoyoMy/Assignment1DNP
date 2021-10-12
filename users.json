@@ -1,0 +1,30 @@
+[
+  {
+    "Username": "Yoyo",
+    "Password": "Yoyo123",
+    "FirstName": "Yoana",
+    "LastName": "Miteva",
+    "Role": "Admin"
+  },
+  {
+    "Username": "Bob",
+    "Password": "Bob123",
+    "FirstName": "Bob",
+    "LastName": "Bob",
+    "Role": "User"
+  },
+  {
+    "Username": "Marty",
+    "Password": "Marty123",
+    "FirstName": "Martin",
+    "LastName": "Tsvetkov",
+    "Role": "Admin"
+  },
+  {
+    "Username": "Robie",
+    "Password": "Robie123",
+    "FirstName": "Rob",
+    "LastName": "Rob",
+    "Role": "User"
+  }
+]
