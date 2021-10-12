@@ -24,7 +24,7 @@
 
 protected override async Task OnInitializedAsync()
     {
-        newFamily.Id = FamilyServices.GetFamilies().Count + 1;
+        newFamily.Id = FamilyServices.GetFamilies().Last().Id + 1;
     }
     public void AddNewFamily()
     {

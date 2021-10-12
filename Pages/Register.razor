@@ -2,6 +2,7 @@
 @using Authorization
 @using Model
 @using FileData
+@using System.ComponentModel.DataAnnotations
 
 @inject IUserService UserService
 @inject NavigationManager NavigationManager
@@ -9,38 +10,46 @@
 
 <h1>Register</h1>
 <AuthorizeView>
-<NotAuthorized>  
-    
-    <div class="col-xs-4">
-        <div class="form-group" >
-            <label>First name:</label>
-            <input class="form-control"  type="text" placeholder="first name" @bind-value="firstName" />
+    <NotAuthorized>
+
+        <div class="col-xs-4">
+            <div class="form-group">
+                <label>First name:</label>
+                <input class="form-control" type="text" placeholder="first name" @bind-value="firstName" />
+            </div>
+            <div class="form-group">
+                <label>Last name:</label>
+                <input class="form-control" type="text" placeholder="last name" @bind-value="lastName" />
+            </div>
+            <div class="form-group">
+                <label>Username:</label>
+                <input class="form-control" type="text" placeholder="user name" @bind-value="username" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" placeholder="password" @bind-value="password" />
+            </div>
         </div>
-        <div class="form-group" >
-            <label>Last name:</label>
-            <input class="form-control" type="text" placeholder="last name" @bind-value="lastName"/>
-        </div>
-        <div class="form-group" >
-            <label>Username:</label>
-            <input class="form-control" type="text" placeholder="user name" @bind-value="username"/>
-        </div>
-        <div class="form-group" >
-            <label>Password</label>
-            <input class="form-control" type="password" placeholder="password" @bind-value="password"/>
-        </div>
-    </div>
         <div style="color:red">@errorMessage</div>
 
         <button class="btn btn-light"><a href="" @onclick="RegisterUser">
-            Register
-        </a>
+                Register
+            </a>
         </button>
-</NotAuthorized>
+    </NotAuthorized>
 </AuthorizeView>
-@code{
+@code {
+    [Required]
+    [MinLength(4)]
     private string username;
+    [Required]
+    [MinLength(4)] 
     private string password;
+    [Required(ErrorMessage = "Enter your name.")]
+    [MinLength(2)]
     private string firstName;
+    [Required]
+    [MinLength(2)]
     private string lastName;
     public string errorMessage;
 
@@ -53,7 +62,7 @@
         user.Password = password;
         user.Role = "User";
         User us = UserService.GetUsers().FirstOrDefault(f => f.Username.Equals(username));
-        if(us != null)
+        if (us != null)
         {
             errorMessage = "User already exists";
         }
@@ -61,13 +70,16 @@
         {
             UserService.AddUser(user);
             errorMessage = "";
-            try {
-            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
-            username = "";
-            password = "";
-        } catch (Exception e) {
-            errorMessage = e.Message;
-        }
+            try
+            {
+                ((CustomAuthenticationStateProvider)AuthenticationStateProvider).ValidateLogin(username, password);
+                username = "";
+                password = "";
+            }
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
             NavigationManager.NavigateTo("/");
         }
     }

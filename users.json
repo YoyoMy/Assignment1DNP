@@ -26,5 +26,33 @@
     "FirstName": "Rob",
     "LastName": "Rob",
     "Role": "User"
+  },
+  {
+    "Username": "Koko",
+    "Password": "Koko123",
+    "FirstName": "Koko",
+    "LastName": "Koko",
+    "Role": "User"
+  },
+  {
+    "Username": "Gogo",
+    "Password": "Gogo123",
+    "FirstName": "Gog",
+    "LastName": "Gogo",
+    "Role": "User"
+  },
+  {
+    "Username": "ghjk",
+    "Password": "ghjk1",
+    "FirstName": "bob",
+    "LastName": "bobg",
+    "Role": "User"
+  },
+  {
+    "Username": "lolo",
+    "Password": "lolo123",
+    "FirstName": "lolo",
+    "LastName": "lolo",
+    "Role": "User"
   }
 ]

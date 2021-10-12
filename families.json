@@ -1212,7 +1212,7 @@
         "HairColor": "Brown",
         "EyeColor": "Brown",
         "Age": 20,
-        "Weight": 64,
+        "Weight": 62,
         "Height": 160,
         "Sex": "F"
       }
@@ -1247,9 +1247,46 @@
       },
       {
         "Id": 3,
-        "Species": "Dove",
+        "Species": "Chiken",
         "Name": "Coco",
         "Age": 0
+      }
+    ]
+  },
+  {
+    "Id": 13,
+    "StreetName": "Slotsgade",
+    "HouseNumber": 66,
+    "Adults": [],
+    "Children": [],
+    "Pets": []
+  },
+  {
+    "Id": 14,
+    "StreetName": "Slotsgade",
+    "HouseNumber": 65,
+    "Adults": [],
+    "Children": [
+      {
+        "Interests": [],
+        "Pets": [],
+        "Id": 1,
+        "FirstName": "koko",
+        "LastName": "koko",
+        "HairColor": "blond",
+        "EyeColor": "pink",
+        "Age": 2,
+        "Weight": 23,
+        "Height": 30,
+        "Sex": "M"
+      }
+    ],
+    "Pets": [
+      {
+        "Id": 1,
+        "Species": "dog",
+        "Name": "fluffy",
+        "Age": 3
       }
     ]
   }

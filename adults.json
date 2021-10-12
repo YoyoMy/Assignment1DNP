@@ -241,17 +241,17 @@
   },
   {
     "JobTitle": {
-      "JobTitle": "Student",
+      "JobTitle": "student",
       "Salary": 0
     },
     "Id": 16,
     "FirstName": "Bob",
     "LastName": "Bob",
-    "HairColor": "Blond",
-    "EyeColor": "Blue",
+    "HairColor": "Bobo",
+    "EyeColor": "Bobo",
     "Age": 20,
-    "Weight": 96,
-    "Height": 180,
-    "Sex": "M"
+    "Weight": 123,
+    "Height": 123,
+    "Sex": "F"
   }
 ]
